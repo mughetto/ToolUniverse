@@ -97,8 +97,8 @@ def main():
         )
         f.write("\n".join(all_functions))
         f.write(
-            "\n\ndef run_server():\n"
-            "    mcp.run(transport='streamable-http', host='127.0.0.1', port=8000)\n\n"
+            "\n\ndef run_server(transport: str = 'streamable-http', host: str = '127.0.0.1', port: int = 8000):\n"
+            "    mcp.run(mcp.run(transport=transport, host=host, port=port))\n\n"
             "def run_claude_desktop():\n"
             "    print(\"Starting ToolUniverse MCP server...\")\n"
             "    mcp.run(transport='stdio')\n"
