@@ -3331,9 +3331,8 @@ def OpenTargets_get_target_id_description_by_name(
         }
     })
 
-
-def run_server():
-    mcp.run(transport='streamable-http', host='127.0.0.1', port=8000)
+def run_server(transport: str = 'streamable-http', host: str = '127.0.0.1', port: int = 8000):
+    mcp.run(transport=transport, host=host, port=port)
 
 def run_claude_desktop():
     print("Starting ToolUniverse MCP server...")
